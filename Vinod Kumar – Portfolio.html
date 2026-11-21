@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vinod Kumar – Senior Frontend Developer & Web Designer</title>
+<meta name="description" content="Portfolio of Vinod Kumar, Senior Frontend Developer and Web Designer with 7+ years of experience in responsive websites, CRM dashboards and WordPress.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B1220;--bg2:#111a2e;--card:#121c33;--line:#22304d;--text:#e8edf7;--muted:#9aa8c4;--blue:#3B82F6;--blue2:#60a5fa;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Poppins,system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+section{padding:88px 0}
+.alt{background:var(--bg2)}
+h1,h2,h3,h4{line-height:1.2;margin:0 0 12px}
+h2{font-size:clamp(1.7rem,4vw,2.4rem)}
+.eyebrow{display:inline-block;font-size:.75rem;letter-spacing:.18em;font-weight:600;color:var(--blue2);margin-bottom:12px}
+.lead{color:var(--muted)}
+.grad{background:linear-gradient(90deg,var(--blue),#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* nav */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(11,18,32,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:19;background:rgba(11,18,32,.95)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:700;font-size:1.15rem}.logo span{color:var(--blue)}
+.links{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+.links a{padding:8px 14px;border-radius:99px;font-size:.88rem;color:var(--muted);transition:.2s}
+.links a:hover,.links a.active{color:#fff;background:rgba(59,130,246,.18)}
+.burger{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:10px;padding:8px 12px;font-size:1.1rem;cursor:pointer}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:12px;font-weight:600;font-size:.92rem;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:.25s}
+.btn-p{background:linear-gradient(135deg,var(--blue),#2563eb);color:#fff;box-shadow:0 8px 24px rgba(59,130,246,.35)}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(59,130,246,.5)}
+.btn-o{border-color:var(--line);color:var(--text)}.btn-o:hover{border-color:var(--blue);color:var(--blue2);transform:translateY(-3px)}
+/* hero */
+.hero{padding:80px 0 96px;background:radial-gradient(900px 500px at 85% 10%,rgba(59,130,246,.22),transparent 60%),radial-gradient(600px 400px at 0 90%,rgba(139,92,246,.12),transparent 60%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.label{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;letter-spacing:.18em;font-weight:600;color:var(--blue2);border:1px solid var(--line);padding:7px 14px;border-radius:99px;background:rgba(59,130,246,.08)}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.hero h1{font-size:clamp(2.2rem,6vw,3.7rem);margin:20px 0 8px;font-weight:700}
+.role{font-size:clamp(1.1rem,2.4vw,1.45rem);font-weight:500;margin-bottom:14px}
+.badge-exp{display:inline-block;margin:6px 0 16px;padding:6px 14px;border-radius:10px;background:linear-gradient(135deg,rgba(59,130,246,.25),rgba(139,92,246,.2));border:1px solid rgba(96,165,250,.35);font-size:.85rem;font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.visual{position:relative;display:grid;place-items:center;min-height:380px}
+.avatar{width:min(320px,80%);aspect-ratio:1;border-radius:32px;background:linear-gradient(145deg,#1b2a4d,#0f1830);border:1px solid var(--line);display:grid;place-items:center;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 8px rgba(59,130,246,.06);transform:rotate(-3deg)}
+.avatar .code{font-family:ui-monospace,Menlo,monospace;font-size:clamp(.8rem,1.6vw,.95rem);color:var(--blue2);line-height:1.9;padding:24px}
+.avatar .code b{color:#c4b5fd;font-weight:500}.avatar .code i{color:#86efac;font-style:normal}
+.chip{position:absolute;padding:8px 14px;border-radius:12px;background:rgba(18,28,51,.92);border:1px solid var(--line);font-size:.8rem;font-weight:600;box-shadow:0 10px 30px rgba(0,0,0,.4);animation:float 5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-12px)}}
+/* grids */
+.grid{display:grid;gap:22px}
+.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:rgba(59,130,246,.6);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tag{font-size:.78rem;padding:5px 12px;border-radius:99px;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.3);color:var(--blue2)}
+.stat{text-align:center}.stat strong{display:block;font-size:2rem;font-weight:700;color:var(--blue2)}.stat span{font-size:.85rem;color:var(--muted)}
+.head{text-align:center;max-width:620px;margin:0 auto 48px}
+.skill h3{font-size:1rem;color:var(--blue2);text-transform:uppercase;letter-spacing:.1em}
+.bar{margin:14px 0}.bar div:first-child{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:6px}
+.track{height:7px;border-radius:9px;background:#1b2845;overflow:hidden}
+.fill{height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--blue),#8b5cf6);transition:width 1.2s ease}
+/* timeline */
+.tl{position:relative;max-width:800px;margin:0 auto;padding-left:34px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--blue),transparent)}
+.tl-item{position:relative;margin-bottom:24px}
+.tl-item::before{content:"";position:absolute;left:-34px;top:28px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:4px solid var(--blue)}
+.when{font-size:.8rem;color:var(--blue2);font-weight:600}
+.tl ul,.card ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:.92rem}
+/* projects */
+.shot{height:160px;border-radius:12px;margin-bottom:18px;background:linear-gradient(145deg,#1b2a4d,#0e1730);border:1px solid var(--line);overflow:hidden}
+.shot .bar2{display:flex;gap:6px;padding:9px 12px;background:rgba(255,255,255,.04)}
+.shot .bar2 i{width:9px;height:9px;border-radius:50%;background:#334766}
+.shot .body{padding:12px;display:grid;grid-template-columns:60px 1fr;gap:10px}
+.shot .body span{display:block;border-radius:6px;background:rgba(59,130,246,.25);height:14px;margin-bottom:8px}
+.shot .body span:nth-child(2){width:70%;background:rgba(139,92,246,.3)}.shot .body span:nth-child(3){width:50%}
+.shot .side{background:rgba(255,255,255,.06);border-radius:8px;height:92px}
+.cat{font-size:.75rem;color:var(--blue2);font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+/* contact */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+.info{display:flex;gap:14px;align-items:center;margin:18px 0}
+.ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:rgba(59,130,246,.15);font-size:1.15rem}
+.info small{display:block;color:var(--muted);font-size:.78rem}
+.social{display:flex;gap:10px;margin-top:24px}
+.social a{padding:9px 14px;border:1px solid var(--line);border-radius:10px;font-size:.82rem;color:var(--muted);transition:.2s}
+.social a:hover{border-color:var(--blue);color:#fff}
+label{display:block;font-size:.82rem;color:var(--muted);margin-bottom:6px}
+input,textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--text);font:inherit;margin-bottom:16px;transition:.2s}
+input:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(59,130,246,.2)}
+.note{font-size:.85rem;color:#86efac;min-height:1.2em;margin:10px 0 0}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.top{border:1px solid var(--line);padding:8px 16px;border-radius:10px;background:none;color:var(--text);cursor:pointer;font:inherit}.top:hover{border-color:var(--blue)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(max-width:991px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}.hero .wrap,.about,.contact{grid-template-columns:1fr}.visual{min-height:340px}}
+@media(max-width:767px){
+ section{padding:64px 0}.burger{display:block}
+ .links{position:absolute;left:0;right:0;top:64px;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 20px 16px;display:none}
+ .links.open{display:flex}.g3,.g2{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+ <nav class="wrap" aria-label="Main">
+  <a href="#home" class="logo">Vinod<span>.</span>Kumar</a>
+  <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  <ul class="links" id="links">
+   <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li>
+   <li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+ </nav>
+</header>
+<main>
+<section class="hero" id="home">
+ <div class="wrap">
+  <div>
+   <span class="label"><i class="dot"></i>AVAILABLE FOR OPPORTUNITIES</span>
+   <h1>Hi, I’m <span class="grad">Vinod Kumar</span></h1>
+   <div class="role">Senior Frontend Developer & Web Designer</div>
+   <p style="font-size:1.1rem;font-weight:500;margin:0 0 10px">Crafting Modern, Responsive & User-Friendly Digital Experiences.</p>
+   <span class="badge-exp">★ 7+ Years of Experience</span>
+   <p class="lead" style="max-width:540px;margin:0">I build fast, polished interfaces with clean frontend code, thoughtful UI/UX design and WordPress expertise, from CRM dashboards to customer-facing business websites.</p>
+   <div class="ctas">
+    <a class="btn btn-p" href="assets/Vinod-Kumar-Resume.pdf" download>⬇ Download Resume</a>
+    <a class="btn btn-o" href="#projects">Explore My Work</a>
+    <a class="btn btn-o" href="#contact">Contact Me</a>
+   </div>
+  </div>
+  <div class="visual" aria-hidden="true">
+   <div class="avatar"><div class="code"><b>const</b> dev = {<br>&nbsp;&nbsp;name: <i>"Vinod"</i>,<br>&nbsp;&nbsp;exp: <i>"7+ yrs"</i>,<br>&nbsp;&nbsp;focus: <i>"UI/UX"</i>,<br>&nbsp;&nbsp;pixelPerfect: <b>true</b><br>};</div></div>
+   <span class="chip" style="top:6%;left:4%">HTML5</span><span class="chip" style="top:14%;right:2%;animation-delay:-1s">CSS3</span>
+   <span class="chip" style="top:46%;left:-2%;animation-delay:-2s">JavaScript</span><span class="chip" style="top:50%;right:-2%;animation-delay:-3s">Bootstrap</span>
+   <span class="chip" style="bottom:8%;left:8%;animation-delay:-1.5s">jQuery</span><span class="chip" style="bottom:4%;right:8%;animation-delay:-2.5s">WordPress</span>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="about">
+ <div class="wrap">
+  <div class="about rv">
+   <div>
+    <span class="eyebrow">ABOUT ME</span>
+    <h2>Turning Ideas Into Digital Experiences</h2>
+    <p class="lead">With 7+ years in frontend development and web design, I turn requirements into responsive, intuitive and visually consistent products. I have worked across agencies and product teams, collaborating closely with backend developers on API integration and deployment.</p>
+    <div class="tags"><span class="tag">Responsive Website Development</span><span class="tag">CRM & Dashboard Design</span><span class="tag">Insurance Portals</span><span class="tag">Real Estate Websites</span><span class="tag">WordPress Development</span><span class="tag">UI/UX Design</span></div>
+   </div>
+   <div class="grid g2">
+    <div class="card stat"><strong>7+</strong><span>Years Experience</span></div>
+    <div class="card stat"><strong>4+</strong><span>Companies</span></div>
+    <div class="card stat"><strong>Many</strong><span>Client Projects</span></div>
+    <div class="card stat"><strong>100%</strong><span>Focus on User Experience</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="skills">
+ <div class="wrap">
+  <div class="head rv"><span class="eyebrow">TECHNICAL SKILLS</span><h2>Tools I Work With</h2></div>
+  <div class="grid g3">
+   <div class="card skill rv"><h3>Languages</h3>
+    <div class="bar"><div><span>HTML5</span><span>95%</span></div><div class="track"><div class="fill" data-w="95"></div></div></div>
+    <div class="bar"><div><span>CSS3</span><span>92%</span></div><div class="track"><div class="fill" data-w="92"></div></div></div>
+    <div class="bar"><div><span>JavaScript</span><span>82%</span></div><div class="track"><div class="fill" data-w="82"></div></div></div>
+    <div class="bar"><div><span>jQuery</span><span>88%</span></div><div class="track"><div class="fill" data-w="88"></div></div></div>
+    <div class="bar"><div><span>Basic React.js</span><span>50%</span></div><div class="track"><div class="fill" data-w="50"></div></div></div></div>
+   <div class="card skill rv"><h3>Frameworks & CMS</h3>
+    <div class="bar"><div><span>Bootstrap</span><span>94%</span></div><div class="track"><div class="fill" data-w="94"></div></div></div>
+    <div class="bar"><div><span>Responsive Design</span><span>96%</span></div><div class="track"><div class="fill" data-w="96"></div></div></div>
+    <div class="bar"><div><span>WordPress</span><span>85%</span></div><div class="track"><div class="fill" data-w="85"></div></div></div>
+    <h3 style="margin-top:26px">Design Tools</h3>
+    <div class="tags" style="margin-top:8px"><span class="tag">Adobe Photoshop</span><span class="tag">UI/UX Design</span></div></div>
+   <div class="card skill rv"><h3>Developer Tools</h3>
+    <div class="tags"><span class="tag">VS Code</span><span class="tag">Git</span><span class="tag">FileZilla</span><span class="tag">Notepad++</span></div>
+    <p class="lead" style="font-size:.9rem;margin-top:22px">Clean, modular, maintainable code with a mobile-first, SEO-friendly approach on every build.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="experience">
+ <div class="wrap">
+  <div class="head rv"><span class="eyebrow">EXPERIENCE</span><h2>Professional Journey</h2></div>
+  <div class="tl">
+   <div class="tl-item card rv"><div class="when">December 2025 – May 2026 | New Delhi</div><h3>Senior Web Designer / Frontend Developer</h3><strong style="color:var(--blue2)">Fame Pixel IT Hub</strong><ul><li>Developing responsive websites and improving user experience.</li><li>Implementing modern UI layouts with mobile-first and SEO-friendly structures.</li></ul></div>
+   <div class="tl-item card rv"><div class="when">March 2025 – December 2025 | New Delhi</div><h3>Web Designer</h3><strong style="color:var(--blue2)">PCC Softech</strong><ul><li>Built dynamic business websites and custom landing pages.</li><li>Enhanced performance, UI consistency, and browser compatibility.</li></ul></div>
+   <div class="tl-item card rv"><div class="when">May 2019 – February 2025 | New Delhi</div><h3>Frontend Developer</h3><strong style="color:var(--blue2)">Head Field Solution</strong><ul><li>Designed CRM dashboards, insurance portals, lead management systems, and real estate websites.</li><li>Collaborated with backend developers for API integration and deployment.</li></ul></div>
+   <div class="tl-item card rv"><div class="when">March 2018 – April 2019 | New Delhi</div><h3>Web Designer</h3><strong style="color:var(--blue2)">Arihant Web Tech</strong><ul><li>Created static and dynamic websites with clean layouts and responsive designs.</li></ul></div>
+  </div>
+ </div>
+</section>
+
+<section id="projects">
+ <div class="wrap">
+  <div class="head rv"><span class="eyebrow">FEATURED PROJECTS</span><h2>Selected Work</h2></div>
+  <div class="grid g2">
+   <article class="card rv"><div class="shot"><div class="bar2"><i></i><i></i><i></i></div><div class="body"><div class="side"></div><div><span></span><span></span><span></span></div></div></div><div class="cat">CRM Platform</div><h3>Portin Application</h3><ul><li>Designed lead upload and lead tracking modules with validations and responsive UI.</li><li>Improved workflow efficiency through user-friendly dashboard design.</li></ul><div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">jQuery</span></div></article>
+   <article class="card rv"><div class="shot"><div class="bar2"><i></i><i></i><i></i></div><div class="body"><div class="side"></div><div><span></span><span></span><span></span></div></div></div><div class="cat">Enterprise Application</div><h3>Glocal Opportunities CRM</h3><ul><li>Developed lead management dashboards with interactive reporting modules.</li><li>Enhanced usability using jQuery components and clean navigation.</li></ul><div class="tags"><span class="tag">Bootstrap</span><span class="tag">jQuery</span><span class="tag">Dashboard UI</span></div></article>
+   <article class="card rv"><div class="shot"><div class="bar2"><i></i><i></i><i></i></div><div class="body"><div class="side"></div><div><span></span><span></span><span></span></div></div></div><div class="cat">Customer Portal</div><h3>Insurance Website</h3><ul><li>Built responsive pages for policy browsing, inquiry forms, and customer engagement.</li></ul><div class="tags"><span class="tag">HTML5</span><span class="tag">Bootstrap</span><span class="tag">JavaScript</span></div></article>
+   <article class="card rv"><div class="shot"><div class="bar2"><i></i><i></i><i></i></div><div class="body"><div class="side"></div><div><span></span><span></span><span></span></div></div></div><div class="cat">Property Platform</div><h3>Real Estate Website</h3><ul><li>Created property listing pages, inquiry forms, and mobile-friendly layouts.</li></ul><div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Responsive</span></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="education">
+ <div class="wrap">
+  <div class="head rv"><span class="eyebrow">EDUCATION</span><h2>Academic Background</h2></div>
+  <div class="grid g3">
+   <div class="card rv"><div class="ico">🎓</div><h3 style="margin-top:14px">Bachelor of Arts (B.A.)</h3><span class="lead">Delhi University</span></div>
+   <div class="card rv"><div class="ico">📘</div><h3 style="margin-top:14px">Senior Secondary (12th)</h3><span class="lead">CBSE Board</span></div>
+   <div class="card rv"><div class="ico">📗</div><h3 style="margin-top:14px">Secondary (10th)</h3><span class="lead">CBSE Board</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap contact rv">
+  <div>
+   <span class="eyebrow">CONTACT</span>
+   <h2>Let’s Build Something Amazing Together</h2>
+   <p class="lead">Have a project in mind or a role to discuss? I’d love to hear from you.</p>
+   <div class="info"><div class="ico">📞</div><div><small>Phone</small><a href="tel:+919650284861">9650284861</a></div></div>
+   <div class="info"><div class="ico">✉️</div><div><small>Email</small><a href="mailto:vkvk2812@gmail.com">vkvk2812@gmail.com</a></div></div>
+   <div class="info"><div class="ico">📍</div><div><small>Location</small>New Delhi, India</div></div>
+   <div class="social"><a href="#contact" aria-label="LinkedIn (add link)">LinkedIn</a><a href="#contact" aria-label="GitHub (add link)">GitHub</a><a href="#contact" aria-label="Portfolio (add link)">Portfolio</a></div>
+  </div>
+  <form class="card" id="form" novalidate>
+   <label for="n">Full Name</label><input id="n" required>
+   <label for="e">Email Address</label><input id="e" type="email" required>
+   <label for="s">Subject</label><input id="s" required>
+   <label for="m">Message</label><textarea id="m" rows="5" required></textarea>
+   <button class="btn btn-p" type="submit">Send Message →</button>
+   <p class="note" id="note" role="status"></p>
+  </form>
+ </div>
+</section>
+</main>
+<footer>
+ <div class="wrap">
+  <div>Vinod Kumar – Frontend Developer & Web Designer.<br>Copyright © 2026 All Rights Reserved.</div>
+  <button class="top" id="top">↑ Back to Top</button>
+ </div>
+</footer>
+<script>
+(function(){
+ var b=document.getElementById('burger'),l=document.getElementById('links');
+ b.addEventListener('click',function(){var o=l.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+ l.addEventListener('click',function(e){if(e.target.tagName==='A'){l.classList.remove('open');b.setAttribute('aria-expanded',false)}});
+ document.getElementById('top').addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+ // scrollspy
+ var links=[].slice.call(l.querySelectorAll('a')),secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+ function spy(){var y=window.scrollY+120,c=0;secs.forEach(function(s,i){if(s.offsetTop<=y)c=i});links.forEach(function(a,i){a.classList.toggle('active',i===c)})}
+ window.addEventListener('scroll',spy,{passive:true});spy();
+ // reveal + skill bars
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('.fill').forEach(function(f){f.style.width=f.dataset.w+'%'});io.unobserve(e.target)}})},{threshold:.12});
+ document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+ // form -> mailto (no backend)
+ document.getElementById('form').addEventListener('submit',function(e){
+  e.preventDefault();var v=function(i){return document.getElementById(i).value.trim()},n=document.getElementById('note');
+  if(!v('n')||!/\S+@\S+\.\S+/.test(v('e'))||!v('s')||!v('m')){n.style.color='#fca5a5';n.textContent='Please fill in all fields with a valid email.';return}
+  n.style.color='#86efac';n.textContent='Opening your email app…';
+  location.href='mailto:vkvk2812@gmail.com?subject='+encodeURIComponent(v('s'))+'&body='+encodeURIComponent(v('m')+'\n\n— '+v('n')+' ('+v('e')+')');
+ });
+})();
+</script>
+</body>
+</html>
